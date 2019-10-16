@@ -1,0 +1,7 @@
+export CXXFLAGS='-frtti -fexceptions -fPIC'
+rm -rf build && mkdir -p build && cd build && \
+mkdir -p include lib && \
+cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . && \
+cp ../*.h .
+cp *.a ..
+
